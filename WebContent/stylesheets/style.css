@@ -1,5 +1,110 @@
 
 
 body {
-	background-color: lightblue;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	margin: 0; 
 }
+
+
+
+/** Eiquette.html **/
+
+.content-header{
+	width:100%;
+	height:70px;
+	background: black;
+	color: white;
+	font-family: cursive;
+	
+	
+	
+}
+.chooser{
+	width:100%;
+	height:140px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+.content{
+	min-width:800px;
+	min-height:200px;
+	width:100%;
+	height: 100%;
+	background: rgb(20,20,20);
+}
+
+.element{
+	width:30px;
+	height:140px;
+	background: maroon;
+	margin: auto;
+	
+}
+
+/** cutlery and plate **/
+.table{
+	width: 800px;
+	height:700px;
+	background-image: url("../images/table_cloth.png");
+
+	background-repeat: no-repeat;
+	margin: auto;
+}
+
+
+.position-up{
+	width: 100%;
+	padding-top: 120px;
+}
+
+
+.cuttlery-horizontal{
+	height:40px;
+	margin-top: 2px;
+	width:140px;
+	margin: 0px auto;
+	border: 1px solid;
+	border-color: black;
+	
+}
+
+
+.position-down{
+	width: 100%;
+	text-align: center;
+}
+
+
+
+.position-middle{
+	margin: auto;
+	height: 300px;
+	display: inline-block;
+}
+
+
+.plate{
+	width: 300px;
+	height:300px;
+	margin: auto;
+	background-image: url("../images/plate.png");
+	background-size: 300px 300px;
+	background-repeat: no-repeat;
+
+	float: left;
+}
+.cuttlery-vertical{
+	width:30px;
+	height:100%;
+	display: inline-block;
+	float:left;
+	border: 1px solid;
+	border-color: black;
+	margin-left: 2px;
+}
+
+/** cutlery and plate end**/
+
+
+/** Eiquette.html end**/

@@ -9,7 +9,10 @@ smarttableApp.config(['$routeProvider',
                           templateUrl: 'partials/home.html',
                           controller: 'HomeCtrl'
                         }).
-                        
+                        when('/etiquette', {
+                            templateUrl: 'partials/etiquette.html',
+                            controller: 'EtiquetteCtrl'
+                          }).
                         otherwise({
                           redirectTo: '/home'
                         });
