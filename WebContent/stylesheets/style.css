@@ -1,10 +1,63 @@
+/**basic settings**/
 
-
-body {
+html, body {
 	overflow-x: hidden;
 	overflow-y: hidden;
-	margin: 0; 
+	margin: 0;
+	height:100%;
 }
+
+body {
+	border: 24px solid #df4b38; 
+	-moz-box-sizing: border-box; 
+     -webkit-box-sizing: border-box; 
+      box-sizing: border-box;
+
+}
+.surface{
+	background-color: white;
+}
+
+
+/**first page home**/
+
+.welcome{
+	width: 380px;
+	height: 414px;
+	background: url("../images/00_welcome.png") no-repeat;
+	margin:  -190px 0px 0px -212px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+
+}
+/**first page home end**/
+
+/**let the game begin **/
+
+.game-begin{
+	width: 378px;
+	height: 172px;
+	background: url("../images/01_begin_the_game.png") no-repeat;
+	margin:  -189px 0px 0px -86px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	display: block;
+}
+
+.text{
+	width: 600px;
+	height: 172px;
+	display: block;
+	margin:  -300px 0px 0px 0px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+}
+
+
+/**let the game begin end**/
 
 
 

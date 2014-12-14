@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="smarttableApp">
 <head>
 	<meta charset="UTF-8">
 	<title>SmartTable</title>
@@ -11,9 +11,15 @@
 	<script type="text/javascript" src="lib/angular-dragdrop-master/src/angular-dragdrop.min.js"></script>
 	<script src="js/controllers/HomeCtrl.js"></script>
 	<script src="js/controllers/EtiquetteCtrl.js"></script>
+	<script src="js/controllers/BeginTheGameCtrl.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css"> 
 </head>
-<body ng-app="smarttableApp">
-	<div ng-view></div>
+<body >
+
+	<div ng-view class="surface" ></div>
+
+
+	
 </body>
 </html>
