@@ -59,6 +59,21 @@ body {
 
 /**let the game begin end**/
 
+/**slide show**/
+.slideshowContainer{
+	width:100%;
+	height: 50%;
+}
+
+.half-page-text{
+	width:70%;
+	height: 50%;
+	text-align: center;
+	margin: auto;
+}
+
+/**slide show end**/
+
 
 
 /** Eiquette.html **/

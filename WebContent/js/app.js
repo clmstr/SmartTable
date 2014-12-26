@@ -1,5 +1,5 @@
 var smarttableApp = angular.module('smarttableApp', [
-  'ngRoute'
+  'ngRoute', 'ui.bootstrap'
 ]);
 
 smarttableApp.config(['$routeProvider',
@@ -16,7 +16,11 @@ smarttableApp.config(['$routeProvider',
                           when('/begin', {
                               templateUrl: 'partials/01_game_begin.html',
                               controller: 'BeginTheGameCtrl'
-                            }).                         
+                            }).
+                          when('/slideshow',{
+                        	  templateUrl: 'partials/slide_show.html',
+                        	  controller: 'SlideShowCtrl'
+                          }).
 	                        otherwise({
 	                          redirectTo: '/home'
 	                        });
