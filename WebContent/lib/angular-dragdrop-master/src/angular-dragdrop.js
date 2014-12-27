@@ -27,10 +27,13 @@
  * (c) 2013 Amit Gharat a.k.a codef0rmer <amit.2006.it@gmail.com> - amitgharat.wordpress.com
  */
 
-(function (window, angular, undefined) {
+(function (window, angular, $, undefined) {
 'use strict';
 
 var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$timeout', '$parse', function($timeout, $parse) {
+    this.draggableScope = null;
+    this.droppableScope = null;
+
     this.callEventCallback = function (scope, callbackName, event, ui) {
       if (!callbackName) return;
 
@@ -51,7 +54,7 @@ var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$ti
 
         return {
           callback: callbackName.substring(constructor && constructor.length + 1 || 0, atStartBracket),
-          args: (args && args.split(',') || []).map(function(item) { return $parse(item)(scope); }),
+          args: $.map(args && args.split(',') || [], function(item) { return $parse(item)(scope); }),
           constructor: constructor
         }
       }
@@ -68,8 +71,8 @@ var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$ti
         dragModelValue,
         dropModelValue,
         $droppableDraggable = null,
-        droppableScope = $droppable.scope(),
-        draggableScope = $draggable.scope();
+        droppableScope = this.droppableScope,
+        draggableScope = this.draggableScope;
 
       dragModel = $draggable.ngattr('ng-model');
       dropModel = $droppable.ngattr('ng-model');
@@ -132,7 +135,7 @@ var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$ti
 
       var zIndex = $fromEl.css('z-index'),
         fromPos = $fromEl[dropSettings.containment || 'offset'](),
-        wasVisible = $toEl && $toEl.is(':visible'),
+        displayProperty = $toEl.css('display'), // sometimes `display` is other than `block`
         hadNgHideCls = $toEl.hasClass('ng-hide');
 
       if (toPos === null && $toEl.length > 0) {
@@ -148,7 +151,7 @@ var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$ti
           // so we've to remove it in order to grab its position
           if (hadNgHideCls) $toEl.removeClass('ng-hide');
           toPos = $toEl.css({'visibility': 'hidden', 'display': 'block'})[dropSettings.containment || 'offset']();
-          $toEl.css({'visibility': '','display': wasVisible ? 'block' : 'none'});
+          $toEl.css({'visibility': '','display': displayProperty});
         }
       }
 
@@ -255,6 +258,7 @@ var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$ti
               .draggable(jqyouiOptions)
               .draggable({
                 start: function(event, ui) {
+                  ngDragDropService.draggableScope = scope;
                   zIndex = angular.element(jqyouiOptions.helper ? ui.helper : this).css('z-index');
                   angular.element(jqyouiOptions.helper ? ui.helper : this).css('z-index', 9999);
                   jqyoui.startXY = angular.element(this)[dragSettings.containment || 'offset']();
@@ -301,6 +305,7 @@ var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$ti
                 },
                 drop: function(event, ui) {
                   if (angular.element(ui.draggable).ngattr('ng-model') && attrs.ngModel) {
+                    ngDragDropService.droppableScope = scope;
                     ngDragDropService.invokeDrop(angular.element(ui.draggable), angular.element(this), event, ui);
                   } else {
                     ngDragDropService.callEventCallback(scope, dropSettings.onDrop, event, ui);
@@ -327,4 +332,4 @@ var jqyoui = angular.module('ngDragDrop', []).service('ngDragDropService', ['$ti
 
     return element.getAttribute(name) || element.getAttribute('data-' + name);
   };
-})(window, window.angular);
+})(window, window.angular, window.jQuery);

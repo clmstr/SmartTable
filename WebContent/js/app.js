@@ -1,5 +1,5 @@
 var smarttableApp = angular.module('smarttableApp', [
-  'ngRoute', 'ui.bootstrap'
+  'ngRoute', 'ui.bootstrap', 'ngDragDrop'
 ]);
 
 smarttableApp.config(['$routeProvider',
@@ -20,6 +20,14 @@ smarttableApp.config(['$routeProvider',
                           when('/slideshow',{
                         	  templateUrl: 'partials/slide_show.html',
                         	  controller: 'SlideShowCtrl'
+                          }).
+                          when('/cuttleryquiz1',{
+                        	  templateUrl: 'partials/cuttlery_quiz_1.html',
+                        	  controller: 'CuttleryQuizCtrl'
+                          }).
+                          when('/etiquettequiz1',{
+                        	  templateUrl: 'partials/etiquette_quiz_1.html',
+                        	  controller: 'EtiquetteQuizCtrl'
                           }).
 	                        otherwise({
 	                          redirectTo: '/home'

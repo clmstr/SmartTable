@@ -17,6 +17,16 @@ body {
 .surface{
 	background-color: white;
 }
+.horizontal-center{
+	clear:both;
+	margin:auto;
+	display:block;
+}
+
+.inline-block{
+	clear:both;
+	display: inline-block;
+}
 
 
 /**first page home**/
@@ -74,6 +84,75 @@ body {
 
 /**slide show end**/
 
+/**cuttlery quiz**/
+.question{
+	width: 100%;
+	text-align: center;
+	height:25%
+	
+}
+.wrapper{
+	width: 100%;
+	height: 75%;
+	display: inline-block;
+}
+.left-row{
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.right-row{
+	float: right;
+	width: 50%;
+	height: 100%;
+}
+
+#pic1, #pic2, #pic3{
+	width: 300px;
+	height: 200px;
+	
+
+}
+
+
+.pic1_cont, .pic2_cont , .pic3_cont{
+	width: 300px;
+	height: 200px;
+	border: 1px solid;
+	border-color: black;
+}
+
+.draggable{
+	background: maroon;
+	margin: 20px 10px; 
+}
+
+
+/**cuttlery quiz end**/
+/**Etiquette quiz**/
+.picture-holder{
+	margin-top: 40px;
+	width:100%;
+	height:60%;
+
+}
+
+.answer-holder{
+	margin-top: 40px;
+	width:90%;
+}
+.answer{
+	
+	width: 33%;
+}
+
+.answer-selector{
+	font-size: 2.7em;
+	color: #df4b38;
+	text-align:center;
+}
+/**Etiquette quiz end**/
+
 
 
 /** Eiquette.html **/
@@ -105,7 +184,7 @@ body {
 .element{
 	width:30px;
 	height:140px;
-	background: maroon;
+	
 	margin: auto;
 	
 }

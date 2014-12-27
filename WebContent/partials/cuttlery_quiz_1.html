@@ -1,0 +1,21 @@
+<div class="question"></div>
+<div class="wrapper">
+	<div class="left-row">
+		<img class="draggable" id="pic1" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic1" jqyoui-draggable="{animate:true}" ng-hide="!pic1.src" src={{pic1.src}}>
+		<img class="draggable" id="pic2" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic2" jqyoui-draggable="{animate:true}" ng-hide="!pic2.src" src={{pic2.src}}>
+		<img class="draggable" id="pic3" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic3" jqyoui-draggable="{animate:true}" ng-hide="!pic3.src" src={{pic3.src}}>
+
+	</div>
+	<div class="right-row">
+		<div class="pic3_cont" data-drop="true" data-jqyoui-options="{accept:'#pic3'}" ng-model="pic3Cont" jqyoui-droppable>
+			<img   id="pic3" data-drag="false" data-jqyoui-options ng-model="pic3Cont" jqyoui-draggable ng-hide="!pic3Cont.src" src={{pic3Cont.src}}>
+		</div>
+		<div class="pic1_cont" data-drop="true" data-jqyoui-options="{accept:'#pic1'}" ng-model="pic1Cont" jqyoui-droppable>
+			<img   id="pic1" data-drag="false" data-jqyoui-options ng-model="pic1Cont" jqyoui-draggable ng-hide="!pic1Cont.src" src={{pic1Cont.src}}>
+		</div>
+		<div class="pic2_cont" data-drop="true" data-jqyoui-options="{accept:'#pic2'}" ng-model="pic2Cont" jqyoui-droppable>
+			<img   id="pic2" data-drag="false" data-jqyoui-options ng-model="pic2Cont" jqyoui-draggable ng-hide="!pic2Cont.src" src={{pic2Cont.src}}>
+		</div>
+		<span class="glyphicon glyphicon-remove"></span>
+	</div>
+</div>
