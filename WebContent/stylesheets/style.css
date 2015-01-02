@@ -27,7 +27,12 @@ body {
 	clear:both;
 	display: inline-block;
 }
-
+.hr{
+	width: 90%;
+	height: 5px;
+	margin: auto;
+	background-color: #df4b38; 
+}
 
 /**first page home**/
 
@@ -157,45 +162,48 @@ body {
 
 /** Eiquette.html **/
 
-.content-header{
-	width:100%;
-	height:70px;
-	background: black;
-	color: white;
-	font-family: cursive;
-	
-	
-	
-}
+
 .chooser{
 	width:100%;
-	height:140px;
-	overflow-x: scroll;
-	overflow-y: hidden;
+	height:160px;
+	padding-top: 10px;
 }
 .content{
 	min-width:800px;
 	min-height:200px;
 	width:100%;
 	height: 100%;
-	background: rgb(20,20,20);
 }
 
 .element{
 	width:30px;
 	height:140px;
-	
+	background-color:#00ff00;
 	margin: auto;
-	
+/* 	position: fixed; */
+/* 	z-index: 200; */
+
+}
+
+.element-vertical{
+	width:30px;
+	height:140px;
+	background-color:#00ff00;
+	margin: auto;
+		-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+/* 	position: fixed; */
+/* 	z-index: 200; */
+
 }
 
 /** cutlery and plate **/
 .table{
 	width: 800px;
 	height:700px;
-	background-image: url("../images/table_cloth.png");
-
-	background-repeat: no-repeat;
 	margin: auto;
 }
 
@@ -208,7 +216,7 @@ body {
 
 .cuttlery-horizontal{
 	height:40px;
-	margin-top: 2px;
+	margin-top: 2px;	 
 	width:140px;
 	margin: 0px auto;
 	border: 1px solid;
@@ -249,6 +257,7 @@ body {
 	border: 1px solid;
 	border-color: black;
 	margin-left: 2px;
+	padding-top: 50px;
 }
 
 /** cutlery and plate end**/

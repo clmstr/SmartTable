@@ -1,16 +1,19 @@
-<div class="content-header">
-EtiquetteApp
+
+	
+	
+	
+	
+
+	
+	
+	<div class="chooser" >
+		<div class="element" id="cuttleryA"  ng-model="cuttleryA" data-drag="true" ng-hide="!cuttleryA.src" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}"></div>
+		
+		<!-- 					old style -->
+<!-- 		<div class="element" draggable="true" ondragstart="drag(event)" id="element1"> -->
 </div>
-	<div class="chooser" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<div class="hr"></div>
 	
-	<div class="element" draggable="true" ondragstart="drag(event)" id="element1">
-	</div>
-	
-	
-	
-	
-	</div>
-	<div class="content" >
 	
 		<div class="table">
 			<div class="position-up">
@@ -19,7 +22,13 @@ EtiquetteApp
 			</div >
 			<div class="position-down">			
 				<div class="position-middle">
-					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<!-- 					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
+<!-- 					new changes -->
+					<div class="cuttlery-vertical" data-drop="true" data-jqyoui-options="{accept:'#cuttleryA'}" ng-model="placedCuttleryA" jqyoui-droppable>
+						<div class="element"  id="cuttleryA" data-drag="false" data-jqyoui-options ng-model="placedCuttleryA" jqyoui-draggable ng-hide="!placedCuttleryA.src" ></div>
+					</div>
+					
+<!-- 					old style -->
 					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 					<div class="plate"></div>
 					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -30,4 +39,3 @@ EtiquetteApp
 		</div>
 		
 	
-	</div>
