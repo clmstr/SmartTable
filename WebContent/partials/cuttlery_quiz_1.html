@@ -1,21 +1,40 @@
-<div class="question"></div>
-<div class="wrapper">
-	<div class="left-row">
-		<img class="draggable" id="pic1" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic1" jqyoui-draggable="{animate:true}" ng-hide="!pic1.src" src={{pic1.src}}>
-		<img class="draggable" id="pic2" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic2" jqyoui-draggable="{animate:true}" ng-hide="!pic2.src" src={{pic2.src}}>
-		<img class="draggable" id="pic3" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic3" jqyoui-draggable="{animate:true}" ng-hide="!pic3.src" src={{pic3.src}}>
-
+<div class=content-margin>
+	<div class="question">
+		<div class="cuttlery-header">
+			<div class="hr"></div>
+				<b class="padding-five">MI A FUNKCIÓJUK AZ ALÁBBI ESZKÖZÖKNEK?</b>
+			<div class="hr"></div>
+				
+		</div>	
+		Terítes előtt ismerjük meg az evőeszközöket.<br/>
+		<i class="color-red">Melyiket mire használták?</i>
 	</div>
-	<div class="right-row">
-		<div class="pic3_cont" data-drop="true" data-jqyoui-options="{accept:'#pic3'}" ng-model="pic3Cont" jqyoui-droppable>
-			<img   id="pic3" data-drag="false" data-jqyoui-options ng-model="pic3Cont" jqyoui-draggable ng-hide="!pic3Cont.src" src={{pic3Cont.src}}>
+	
+	<div class="wrapper">
+		<div class="left-row">
+			<img class="pic" id="pic1" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic1" jqyoui-draggable="{animate:true}" ng-hide="!pic1.src" src={{pic1.src}}>
+			<img class="pic" id="pic2" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic2" jqyoui-draggable="{animate:true}" ng-hide="!pic2.src" src={{pic2.src}}>
+			<img class="pic" id="pic3" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic3" jqyoui-draggable="{animate:true}" ng-hide="!pic3.src" src={{pic3.src}}>
+			<div ng-hide="pic1.src||pic2.src||pic3.src"><h1><b>Gratulálok, továbbléphetsz!! :)</b></h1> </div>
 		</div>
-		<div class="pic1_cont" data-drop="true" data-jqyoui-options="{accept:'#pic1'}" ng-model="pic1Cont" jqyoui-droppable>
-			<img   id="pic1" data-drag="false" data-jqyoui-options ng-model="pic1Cont" jqyoui-draggable ng-hide="!pic1Cont.src" src={{pic1Cont.src}}>
+		<div class="right-row">
+			<div class="pic_cont pic3_cont" data-drop="true" data-jqyoui-options="{accept:'#pic3'}" ng-model="pic3Cont" jqyoui-droppable>
+				<div class= "glyphicon-remove center-glyph-x glyphicon color-red"  ng-hide="pic3Cont.src"></div>
+				<img   id="pic3" data-drag="false" data-jqyoui-options ng-model="pic3Cont" jqyoui-draggable ng-hide="!pic3Cont.src" src={{pic3Cont.src}}>
+			</div>
+			<div class="cutt-name pic3_name">{{pic3.text}}{{pic3Cont.text}}</div>
+			<div class="pic_cont pic1_cont" data-drop="true" data-jqyoui-options="{accept:'#pic1'}" ng-model="pic1Cont" jqyoui-droppable>
+				<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="pic1Cont.src"></div>
+				<img   id="pic1" data-drag="false" data-jqyoui-options ng-model="pic1Cont" jqyoui-draggable ng-hide="!pic1Cont.src" src={{pic1Cont.src}}>
+			</div>
+			<div class="cutt-name pic1_name">{{pic1.text}}{{pic1Cont.text}}</div>
+			
+			<div class="pic_cont pic2_cont" data-drop="true" data-jqyoui-options="{accept:'#pic2'}" ng-model="pic2Cont" jqyoui-droppable>
+				<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="pic2Cont.src"></div>
+				<img   id="pic2" data-drag="false" data-jqyoui-options ng-model="pic2Cont" jqyoui-draggable ng-hide="!pic2Cont.src" src={{pic2Cont.src}}>
+			</div>
+			<div class="cutt-name pic2_name">{{pic2.text}}{{pic2Cont.text}}</div>
+
 		</div>
-		<div class="pic2_cont" data-drop="true" data-jqyoui-options="{accept:'#pic2'}" ng-model="pic2Cont" jqyoui-droppable>
-			<img   id="pic2" data-drag="false" data-jqyoui-options ng-model="pic2Cont" jqyoui-draggable ng-hide="!pic2Cont.src" src={{pic2Cont.src}}>
-		</div>
-		<span class="glyphicon glyphicon-remove"></span>
 	</div>
 </div>

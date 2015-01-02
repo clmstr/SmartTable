@@ -1,10 +1,10 @@
 smarttableApp.controller('EtiquetteQuizCtrl',['$scope',
      function ($scope){
-     	var validForm = false;
+     	$scope.validForm = false;
      
 		badAnswer = function(){};
 		goodAnswer = function(){
-			validForm = true;		
+			$scope.validForm = true;		
 		};
 		
 	}]);

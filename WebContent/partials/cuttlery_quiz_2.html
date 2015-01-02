@@ -1,0 +1,40 @@
+<div class=content-margin>
+	<div class="question">
+		<div class="cuttlery-header">
+			<div class="hr"></div>
+				<b class="padding-five">MI A FUNKCIÓJUK AZ ALÁBBI ESZKÖZÖKNEK?</b>
+			<div class="hr"></div>
+				
+		</div>	
+		Terítes előtt ismerjük meg az evőeszközöket.<br/>
+		<i class="color-red">Melyiket mire használták?</i>
+	</div>
+	
+	<div class="wrapper">
+		<div class="left-row">
+			<img class="pic" id="pic4" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic4" jqyoui-draggable="{animate:true}" ng-hide="!pic4.src" src={{pic4.src}}>
+			<img class="pic" id="pic5" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic5" jqyoui-draggable="{animate:true}" ng-hide="!pic5.src" src={{pic5.src}}>
+			<img class="pic" id="pic6" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic6" jqyoui-draggable="{animate:true}" ng-hide="!pic6.src" src={{pic6.src}}>
+			<div ng-hide="pic4.src||pic5.src||pic6.src"><h1><b>Gratulálok, továbbléphetsz!! :)</b></h1> </div>
+		</div>
+		<div class="right-row">
+			<div class="pic_cont pic6_cont" data-drop="true" data-jqyoui-options="{accept:'#pic6'}" ng-model="pic6Cont" jqyoui-droppable>
+				<div class= "glyphicon-remove center-glyph-x glyphicon color-red"  ng-hide="pic6Cont.src"></div>
+				<img   id="pic6" data-drag="false" data-jqyoui-options ng-model="pic6Cont" jqyoui-draggable ng-hide="!pic6Cont.src" src={{pic6Cont.src}}>
+			</div>
+			<div class="cutt-name pic6_name">{{pic6.text}}{{pic6Cont.text}}</div>
+			<div class="pic_cont pic4_cont" data-drop="true" data-jqyoui-options="{accept:'#pic4'}" ng-model="pic4Cont" jqyoui-droppable>
+				<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="pic4Cont.src"></div>
+				<img   id="pic4" data-drag="false" data-jqyoui-options ng-model="pic4Cont" jqyoui-draggable ng-hide="!pic4Cont.src" src={{pic4Cont.src}}>
+			</div>
+			<div class="cutt-name pic4_name">{{pic4.text}}{{pic4Cont.text}}</div>
+			
+			<div class="pic_cont pic5_cont" data-drop="true" data-jqyoui-options="{accept:'#pic5'}" ng-model="pic5Cont" jqyoui-droppable>
+				<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="pic5Cont.src"></div>
+				<img   id="pic5" data-drag="false" data-jqyoui-options ng-model="pic5Cont" jqyoui-draggable ng-hide="!pic5Cont.src" src={{pic5Cont.src}}>
+			</div>
+			<div class="cutt-name pic5_name">{{pic5.text}}{{pic5Cont.text}}</div>
+
+		</div>
+	</div>
+</div>

@@ -5,17 +5,21 @@ html, body {
 	overflow-y: hidden;
 	margin: 0;
 	height:100%;
+	background-color: rgb(244,243,241);
+	-webkit-box-shadow: inset 0px -1px 112px 1px rgba(0,0,0,0.61);
+-moz-box-shadow: inset 0px -1px 112px 1px rgba(0,0,0,0.61);
+box-shadow: inset 0px -1px 112px 1px rgba(0,0,0,0.61);
 }
 
 body {
-	border: 24px solid #df4b38; 
+	border: 68px solid rgb(204,7,30); 
 	-moz-box-sizing: border-box; 
      -webkit-box-sizing: border-box; 
       box-sizing: border-box;
-
 }
 .surface{
-	background-color: white;
+	
+	 
 }
 .horizontal-center{
 	clear:both;
@@ -28,12 +32,22 @@ body {
 	display: inline-block;
 }
 .hr{
-	width: 90%;
+	width: 100%;
 	height: 5px;
-	margin: auto;
-	background-color: #df4b38; 
+	background-color: rgb(204,7,30); 
+	border-radius: 5px;
+}
+.content-margin{
+	margin: 50px;
 }
 
+.color-red{
+	color:rgb(204,7,30);
+}
+
+.padding-five{
+	padding: 5px 0px;
+}
 /**first page home**/
 
 .welcome{
@@ -92,10 +106,18 @@ body {
 /**cuttlery quiz**/
 .question{
 	width: 100%;
-	text-align: center;
-	height:25%
+	padding:10px;
+	height:25%;
+	font-size: 25px;
 	
 }
+.cuttlery-header{
+	clear: both; 
+	width: 1050px;
+	font-size: 45px;
+	margin-bottom: 15px; 	
+}
+
 .wrapper{
 	width: 100%;
 	height: 75%;
@@ -105,32 +127,103 @@ body {
 	float: left;
 	width: 50%;
 	height: 100%;
+	margin: 50px;
 }
 .right-row{
 	float: right;
 	width: 50%;
 	height: 100%;
+	
+}
+.center-glyph-x{
+	display: inline-block;
+	margin-top: 200px;
+	font-size: 50px;
+
 }
 
-#pic1, #pic2, #pic3{
-	width: 300px;
-	height: 200px;
+.pic{
+	margin: 80px 50px; 
+}
+
+#pic1, #pic2, #pic3, #pic4, #pic5, #pic6{
+    -webkit-filter: drop-shadow(-12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+	display: inline-block;
+}
+
+
+
+.cutt-name{
+	position: absolute;
+	top:50%;
+	left:50%;
+	font-size: 35px;
+}
+.pic_cont{
+	text-align: right;
+	position: absolute;
+	width: 100px;
+	height: 400px;
+
+	top:50%;
+	left:50%;
+}
+
+
+.pic1_cont {
+	margin: -200px 0px 0px 600px;
+}
+.pic1_name {
+	margin: 0px 0px 0px 700px;
+}
+
+
+.pic2_cont {
+	margin: -100px 0px 0px 300px;
+	
+}
+.pic2_name {
+	margin: 100px 0px 0px 400px;
+	
+}
+.pic3_cont{
+}
+/** how to calculate: top-margin of red-x and left-margin=pic_cont height + postion of the container **/
+.pic3_name{
+	margin: 200px 0px 0px 100px;
+}
+
+
+.pic4_cont {
+	margin: 0px 0px 0px 500px;
+}
+.pic4_name {
+	margin: 200px 0px 0px 600px;
+}
+
+
+.pic5_cont {
+	margin: -400px 0px 0px 300px;
+	
+}
+
+.pic5_name {
+	margin: -200px 0px 0px 400px;
 	
 
 }
 
-
-.pic1_cont, .pic2_cont , .pic3_cont{
-	width: 300px;
-	height: 200px;
-	border: 1px solid;
-	border-color: black;
+.pic6_cont{
+}
+/** how to calculate: top-margin of red-x and left-margin=pic_cont height + postion of the container **/
+.pic6_name{
+	margin: 200px 0px 0px 100px;
 }
 
-.draggable{
-	background: maroon;
-	margin: 20px 10px; 
-}
+
+
+
 
 
 /**cuttlery quiz end**/
@@ -138,25 +231,37 @@ body {
 .picture-holder{
 	margin-top: 40px;
 	width:100%;
-	height:60%;
 
 }
 
 .answer-holder{
-	margin-top: 40px;
-	width:90%;
+	
+	position: absolute;
+	top:700px;
+	left:1300px;
 }
 .answer{
-	
-	width: 33%;
+
+
+}
+
+.answer-selector-sign{
+	font-size: 3.3em;
+	text-align:center;
+	display: inline-block;
 }
 
 .answer-selector{
 	font-size: 2.7em;
-	color: #df4b38;
 	text-align:center;
+	padding-bottom:25px;
+	display: inline-block;
+	
 }
 /**Etiquette quiz end**/
+
+
+
 
 
 
@@ -180,8 +285,6 @@ body {
 	height:140px;
 	background-color:#00ff00;
 	margin: auto;
-/* 	position: fixed; */
-/* 	z-index: 200; */
 
 }
 
@@ -264,3 +367,18 @@ body {
 
 
 /** Eiquette.html end**/
+/** restaurant chooser **/
+.gundel-chooser{
+	position:absolute;
+	top:37%;
+	left: 20%;
+	
+}
+
+.sipos-chooser{
+	
+	position:absolute;
+	top:40%;
+	left: 57%;
+}
+/** restaurant chooser end**/
