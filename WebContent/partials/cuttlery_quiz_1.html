@@ -1,13 +1,6 @@
 <div class=content-margin>
 	<div class="question">
-		<div class="cuttlery-header">
-			<div class="hr"></div>
-				<b class="padding-five">MI A FUNKCIÓJUK AZ ALÁBBI ESZKÖZÖKNEK?</b>
-			<div class="hr"></div>
-				
-		</div>	
-		Terítes előtt ismerjük meg az evőeszközöket.<br/>
-		<i class="color-red">Melyiket mire használták?</i>
+		<img alt="" src="images/question_cutt.png">
 	</div>
 	
 	<div class="wrapper">
@@ -17,7 +10,7 @@
 			<img class="pic" id="pic3" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="pic3" jqyoui-draggable="{animate:true}" ng-hide="!pic3.src" src={{pic3.src}}>
 			<div ng-hide="pic1.src||pic2.src||pic3.src"><h1><b>Gratulálok, továbbléphetsz!! :)</b></h1> </div>
 		</div>
-		<div class="right-row">
+
 			<div class="pic_cont pic3_cont" data-drop="true" data-jqyoui-options="{accept:'#pic3'}" ng-model="pic3Cont" jqyoui-droppable>
 				<div class= "glyphicon-remove center-glyph-x glyphicon color-red"  ng-hide="pic3Cont.src"></div>
 				<img   id="pic3" data-drag="false" data-jqyoui-options ng-model="pic3Cont" jqyoui-draggable ng-hide="!pic3Cont.src" src={{pic3Cont.src}}>
@@ -35,6 +28,14 @@
 			</div>
 			<div class="cutt-name pic2_name">{{pic2.text}}{{pic2Cont.text}}</div>
 
-		</div>
+
 	</div>
 </div>
+
+
+
+	<div class="arrow" ng-click="nextPage('cuttleryquiz2');">
+		<img alt="" ng-src="images/arrow.png">
+	</div>	
+
+

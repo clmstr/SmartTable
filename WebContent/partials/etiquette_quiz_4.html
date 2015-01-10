@@ -1,25 +1,28 @@
 <div class=content-margin>
 	<div class="question">
-		<div class="cuttlery-header">
-			<div class="hr"></div>
-				<b class="padding-five">MIT JELEZTEM A TÁNYÉRON?</b>
-			<div class="hr"></div>
-				
-		</div>	
-		Egy kis illemtan.<br/>
-		<i class="color-red">Mit jeleztem a tányéron?</i>
+		<img alt="" src="images/question_ett.png">
 	</div>
-	<div class="picture-holder">
-	<img alt="" src="images/5_4/plate_4.png" class="horizontal-center" ></div>
-	<div class="answer-holder ">
-		<div class="answer" ng-controller="BadAnswerAlertModalCtrl">
-			<div class="color-red answer-selector-sign glyphicon glyphicon-remove" ng-click="goodAnswer()"></div><div class="answer-selector">SZÜNETET TARTANÉK!</div>
+
+	<img alt="" src="images/5_4/plate_4.png" class="horizontal-center" >
+	
+	<div class="answer-holder">
+		<div ng-controller="BadAnswerAlertModalCtrl" ng-click="goodAnswer()">
+			<div class="color-red answer-selector-sign glyphicon glyphicon-remove" >
+			</div>
+				<img class="answer-selector"  alt="" src="images/5_4/answ1.png">
 		</div>
-		<div class="answer">
-			<div class="color-red answer-selector-sign glyphicon glyphicon-remove" ng-click="open('small')"></div><div class="answer-selector">KÉREM A DESZERETET!</div>
+		<div ng-controller="BadAnswerAlertModalCtrl"  ng-click="open('small')">
+			<div class="color-red answer-selector-sign glyphicon glyphicon-remove"></div>
+				<img class="answer-selector" alt="" src="images/5_4/answ2.png">
 		</div>
-		<div class="answer" ng-controller="BadAnswerAlertModalCtrl">
-			<div class="color-red answer-selector-sign glyphicon glyphicon-remove" ng-click="open('small')"></div><div class="answer-selector">HOZZANAK EGY SZALVÉTÁT!</div>
+		<div ng-controller="BadAnswerAlertModalCtrl" ng-click="open('small')">
+			<div class="color-red answer-selector-sign glyphicon glyphicon-remove" ></div>
+				<img class="answer-selector" alt="" src="images/5_4/answ3.png">
 		</div>
+
 	</div>
 </div>
+
+	<div class="arrow" ng-click="nextPage('etiquettequiz5');">
+		<img alt="" ng-src="images/arrow.png">
+</div>	

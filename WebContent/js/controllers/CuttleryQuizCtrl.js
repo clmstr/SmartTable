@@ -1,5 +1,7 @@
 smarttableApp.controller('CuttleryQuizCtrl',['$scope',
-     function ($scope){
+                                             '$location',
+     function ($scope, 
+    		 $location){
 		 $scope.pic1 = {src: 'images/3_1/deszertkes.png',
 			 			text:'DESZERTKÉS'};
 		 $scope.pic1Cont = {};
@@ -21,6 +23,11 @@ smarttableApp.controller('CuttleryQuizCtrl',['$scope',
 		 $scope.pic6 = {src: 'images/3_2/halvilla.png',
 					text:'HALVILLA'};
 		 $scope.pic6Cont = {};
+		 
+		 
+		 $scope.nextPage = function(view){
+			 $location.path(view);
+		 }
 		 
 	
 	}]);

@@ -7,14 +7,20 @@
 	
 	
 	<div class="chooser" >
-		<div class="element" id="cuttleryA"  ng-model="cuttleryA" data-drag="true" ng-hide="!cuttleryA.src" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}"></div>
+		<img  ng-model="cuttleryA" data-drag="true"  ng-hide="!cuttleryA.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryA.src_small}}>
+		<img  ng-model="cuttleryB" data-drag="true" ng-hide="!cuttleryB.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryB.src_small}}>
+		<img  ng-model="cuttleryC" data-drag="true" ng-hide="!cuttleryC.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryC.src_small}}>
+		<img  ng-model="cuttleryD" data-drag="true" ng-hide="!cuttleryD.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryD.src_small}}>
+		<img  ng-model="cuttleryE" data-drag="true" ng-hide="!cuttleryE.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryE.src_small}}>
+		<img  ng-model="cuttleryF" data-drag="true" ng-hide="!cuttleryF.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryF.src_small}}>
+		<img  ng-model="cuttleryG" data-drag="true" ng-hide="!cuttleryG.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryG.src_small}}>
 		
-		<!-- 					old style -->
-<!-- 		<div class="element" draggable="true" ondragstart="drag(event)" id="element1"> -->
 </div>
-	<div class="hr"></div>
+	<div class="hr long-reduced horizontal-center"></div>
 	
-	
+	<img class="header4" src="images/4/exercise.png">
+	<div class="hr long-header4"></div>
+		
 		<div class="table">
 			<div class="position-up">
 				<div class="cuttlery-horizontal"></div>
@@ -37,5 +43,10 @@
 			</div>
 		
 		</div>
+		
+		
+		<div class="arrow" ng-click="nextPage('restaurantchooser');">
+		<img alt="" ng-src="images/arrow.png">
+</div>	
 		
 	

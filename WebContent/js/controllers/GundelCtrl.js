@@ -1,5 +1,8 @@
-smarttableApp.controller('SlideShowCtrl',['$scope',
-     function ($scope){
+smarttableApp.controller('GundelCtrl',
+		['$scope',
+		 "$location",
+     function ($scope
+    		 ,$location){
 	$scope.myInterval = 5000;
 	  var slides = $scope.slides = [];
 	  $scope.addSlide = function() {
@@ -13,6 +16,8 @@ smarttableApp.controller('SlideShowCtrl',['$scope',
 	    $scope.addSlide();
 	  }
 	
-	
+	  $scope.nextPage = function(view){
+			 $location.path(view);
+		 }
 	
 	}]);

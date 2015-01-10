@@ -1,5 +1,5 @@
 var smarttableApp = angular.module('smarttableApp', [
-  'ngRoute', 'ui.bootstrap', 'ngDragDrop'
+  'ngRoute', 'ui.bootstrap', 'ngDragDrop', 'ngAnimate'
 ]);
 
 smarttableApp.config(['$routeProvider',
@@ -25,9 +25,13 @@ smarttableApp.config(['$routeProvider',
                         	  templateUrl: 'partials/cuttlery_quiz_2.html',
                         	  controller: 'CuttleryQuizCtrl'
                           }).
-                          when('/slideshow',{
-                        	  templateUrl: 'partials/slide_show.html',
-                        	  controller: 'SlideShowCtrl'
+                          when('/gundel',{
+                        	  templateUrl: 'partials/gundel.html',
+                        	  controller: 'GundelCtrl'
+                          }).
+                         when('/sipos',{
+                        	  templateUrl: 'partials/sipos.html',
+                        	  controller: 'SiposCtrl'
                           }).
                           when('/etiquettequiz1',{
                         	  templateUrl: 'partials/etiquette_quiz_1.html',
@@ -49,9 +53,13 @@ smarttableApp.config(['$routeProvider',
                         	  templateUrl: 'partials/etiquette_quiz_5.html',
                         	  controller: 'EtiquetteQuizCtrl'
                           }).
+                          when('/famechooser',{
+                        	  templateUrl: 'partials/fame_chooser.html',
+                        	  controller: 'FameChooserCtrl'
+                          }).
                           when('/restaurantchooser',{
                         	  templateUrl: 'partials/restaurant_chooser.html',
-                        	  controller: 'RestaurantCtrl'
+                        	  controller: 'BeginTheGameCtrl'
                           }).
 	                        otherwise({
 	                          redirectTo: '/home'
