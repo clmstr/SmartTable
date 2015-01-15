@@ -61,6 +61,26 @@ smarttableApp.config(['$routeProvider',
                         	  templateUrl: 'partials/restaurant_chooser.html',
                         	  controller: 'BeginTheGameCtrl'
                           }).
+                          when('/tablecloth',{
+                        	  templateUrl: 'partials/table_cloth.html',
+                        	  controller: 'BeginTheGameCtrl'
+                          }).
+                          when('/caution',{
+                        	  templateUrl: 'partials/caution.html',
+                        	  controller: 'CautionCtrl'
+                          }).
+                          when('/menu',{
+                        	  templateUrl: 'partials/menu.html',
+                        	  controller: 'BeginTheGameCtrl'
+                          }).
+                          when('/elementchooser',{
+                        	  templateUrl: 'partials/element_chooser.html',
+                        	  controller: 'ElementChooserCtrl'
+                          }).
+                          when('/final',{
+                        	  templateUrl: 'partials/final.html',
+                        	  controller: 'FinalCtrl'
+                          }).
 	                        otherwise({
 	                          redirectTo: '/home'
 	                        });

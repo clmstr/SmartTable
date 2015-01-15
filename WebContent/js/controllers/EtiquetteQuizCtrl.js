@@ -3,12 +3,13 @@ smarttableApp.controller('EtiquetteQuizCtrl',
 		 '$location',
      function ($scope,
     		 $location){
-     	$scope.validForm = false;
+			
+			
+			$scope.form={validForm : false};
+
      
 		badAnswer = function(){};
-		goodAnswer = function(){
-			$scope.validForm = true;		
-		};
+		
 		
 		$scope.nextPage = function(view){
 			 $location.path(view);

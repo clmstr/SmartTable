@@ -12,7 +12,7 @@ box-shadow: inset 0px -1px 112px 1px rgba(0,0,0,0.61);
 }
 
 body {
-	border: 34px solid rgb(204,7,30); 
+	border: 36px solid rgb(204,7,30); 
 	-moz-box-sizing: border-box; 
      -webkit-box-sizing: border-box; 
       box-sizing: border-box;
@@ -20,8 +20,8 @@ body {
 .arrow{
 	position:absolute;
 	width: 80px;
-	bottom:120px;
-	right: 150px;
+	bottom:60px;
+	right: 120px;
 	padding:20px;
 	z-index: 200;
 }
@@ -56,6 +56,8 @@ body {
 .padding-five{
 	padding: 5px 0px;
 }
+
+
 /**first page home**/
 
 .welcome{
@@ -99,7 +101,8 @@ body {
 /**gundel**/
 .slideshowContainer{
 	width:100%;
-	height: 100%;
+	height: 545px;
+	margin-bottom: 5px;
 }
 
 .gundel-content{
@@ -150,9 +153,15 @@ body {
 	display: inline-block;
 	margin-top: 200px;
 	font-size: 50px;
+	margin-bottom: 100px;
 
 }
+.hor-center-glyph-x{
+	display: inline-block;
+	margin-top: auto;
+	font-size: 50px;
 
+}
 .pic{
 	margin: 80px 80px; 
 }
@@ -304,13 +313,6 @@ body {
 	height: 100%;
 }
 
-.element{
-	width:30px;
-	height:140px;
-	background-color:#00ff00;
-	margin: auto;
-
-}
 
 .element-vertical{
 	width:30px;
@@ -329,28 +331,32 @@ body {
 
 /** cutlery and plate **/
 .table{
-	width: 800px;
-	height:700px;
+
 	margin: auto;
 }
 
 
 .position-up{
 	width: 100%;
-	padding-top: 120px;
 }
 
 
 .cuttlery-horizontal{
-	height:40px;
+	height:80px;
 	margin-top: 2px;	 
-	width:140px;
-	margin: 0px auto;
-	border: 1px solid;
-	border-color: black;
-	
+	width:100%;
+	text-align:center;
+ 	margin: auto; 
+
 }
 
+
+.cuttlery-vertical{
+	width:80px;
+	height:433px;
+	display: inline-block;
+	float:left;
+}
 
 .position-down{
 	width: 100%;
@@ -361,31 +367,17 @@ body {
 
 .position-middle{
 	margin: auto;
-	height: 300px;
 	display: inline-block;
 }
 
 
 .plate{
-	width: 300px;
-	height:300px;
+	width: 472px;
+	height:433px;
 	margin: auto;
-	background-image: url("../images/plate.png");
-	background-size: 300px 300px;
-	background-repeat: no-repeat;
-
 	float: left;
 }
-.cuttlery-vertical{
-	width:30px;
-	height:100%;
-	display: inline-block;
-	float:left;
-	border: 1px solid;
-	border-color: black;
-	margin-left: 2px;
-	padding-top: 50px;
-}
+
 
 /** cutlery and plate end**/
 
@@ -407,20 +399,106 @@ body {
 }
 /** restaurant chooser end**/
 /** famechooser**/
-.row-12{
-	clear:both;
-	text-align:center;
-	width:33%;
-	display: inline-block;
-	
+
+.fame-container{
+	width: 100%;
+	height: 800px;
+	float:left; 
+	  
 }
-.pic-12{
-	margin: 60px 0px;
+
+
+#first-fame{
+	width:400px;
+	position:absolute;
+	top:260px;
+	left:150px;
+	text-align: center;
 }
+#second-fame{
+	width:400px;
+	position:absolute;
+	top:260px;
+	left:50%;
+	text-align: center; 
+	margin-left:-200px;
+}
+#third-fame{
+	width:400px;
+	position:absolute;
+	top:260px;
+	right:150px;
+	text-align: center;
+}
+
 
 
 /**famechooser end**/
-/**animatgions**/
+
+/**table_cloth**/
+
+.table-cloth-text{
+	width: 100%;
+	padding-top:50px;
+	text-align: center;
+}
+
+/**table_cloth end**/
+/**caution**/
+
+.caution-sign{
+	width:886px;
+	height:143px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left: -443px;
+	margin-top:-70px;
+}
+/**caution-sign**/
+/** menu**/
+
+.menu-cont{
+	width:100%;
+	height:1008px;
+	overflow-y:scroll;
+	text-align: center;
+}
+
+
+.list{
+	margin-top:160px;
+	width:80%;
+	height:800px;
+}
+.list-element{
+	margin-top:60px;
+	
+}
+.space{
+	margin-right: 100px;
+	display:inline-block;
+}
+.form-control{
+	height: 36px;
+	width: 200px;
+	display:inline-block;
+}
+/** menu end**/
+
+/**final**/
+.final-sign{
+	width:492px;
+	height:288px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left: -296px;
+	margin-top:-144px;
+}
+
+/**final_end**/
+/**animations**/
 .view-container {
   position: relative;
   width:100%;

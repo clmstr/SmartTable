@@ -1,4 +1,4 @@
-smarttableApp.controller('HomeCtrl',
+smarttableApp.controller('FinalCtrl',
 		['$scope',
 		 '$location',
 		 '$timeout',
@@ -9,7 +9,7 @@ smarttableApp.controller('HomeCtrl',
 	
 
 	$scope.redirect = function() {
-	    $location.path("begin");
+	    $location.path("home");
 	}    
 
 	$timeout(function(){

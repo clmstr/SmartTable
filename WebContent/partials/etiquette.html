@@ -7,14 +7,15 @@
 	
 	
 	<div class="chooser" >
-		<img  ng-model="cuttleryA" data-drag="true"  ng-hide="!cuttleryA.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryA.src_small}}>
-		<img  ng-model="cuttleryB" data-drag="true" ng-hide="!cuttleryB.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryB.src_small}}>
-		<img  ng-model="cuttleryC" data-drag="true" ng-hide="!cuttleryC.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryC.src_small}}>
-		<img  ng-model="cuttleryD" data-drag="true" ng-hide="!cuttleryD.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryD.src_small}}>
-		<img  ng-model="cuttleryE" data-drag="true" ng-hide="!cuttleryE.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryE.src_small}}>
-		<img  ng-model="cuttleryF" data-drag="true" ng-hide="!cuttleryF.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryF.src_small}}>
-		<img  ng-model="cuttleryG" data-drag="true" ng-hide="!cuttleryG.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryG.src_small}}>
-		
+		<img id="cuttleryA"  ng-model="cuttleryA" data-drag="true"  ng-hide="!cuttleryA.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryA.src_small}}>
+		<img id="cuttleryB" ng-model="cuttleryB" data-drag="true" ng-hide="!cuttleryB.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryB.src_small}}>
+		<img id="cuttleryC" ng-model="cuttleryC" data-drag="true" ng-hide="!cuttleryC.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryC.src_small}}>
+		<img id="cuttleryD" ng-model="cuttleryD" data-drag="true" ng-hide="!cuttleryD.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryD.src_small}}>
+		<img id="cuttleryE" ng-model="cuttleryE" data-drag="true" ng-hide="!cuttleryE.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryE.src_small}}>
+		<img id="cuttleryF" ng-model="cuttleryF" data-drag="true" ng-hide="!cuttleryF.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryF.src_small}}>
+		<img id="cuttleryG" ng-model="cuttleryG" data-drag="true" ng-hide="!cuttleryG.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryG.src_small}}>
+		<img id="cuttleryH" ng-model="cuttleryH" data-drag="true" ng-hide="!cuttleryH.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryH.src_small}}>
+		<img id="cuttleryI" ng-model="cuttleryI" data-drag="true" ng-hide="!cuttleryI.src_small" data-jqyoui-options="{revert: 'invalid'}"  jqyoui-draggable="{animate:true}" ng-src={{cuttleryI.src_small}}>
 </div>
 	<div class="hr long-reduced horizontal-center"></div>
 	
@@ -23,30 +24,62 @@
 		
 		<div class="table">
 			<div class="position-up">
-				<div class="cuttlery-horizontal"></div>
-				<div class="cuttlery-horizontal"></div>
+				
+					<div class="cuttlery-horizontal" data-drop="true" data-jqyoui-options="{accept:'#cuttleryE'}" ng-model="placedCuttleryE" jqyoui-droppable>
+						<img  id="cuttleryE" data-drag="false" data-jqyoui-options ng-model="placedCuttleryE" jqyoui-draggable ng-hide="!placedCuttleryE.src"  ng-src={{cuttleryE.src}}>
+						<div class="glyphicon glyphicon-remove hor-center-glyph-x color-red" ng-hide="placedCuttleryE.src"></div>
+					</div>
+					<div class="cuttlery-horizontal" data-drop="true" data-jqyoui-options="{accept:'#cuttleryG'}" ng-model="placedCuttleryG" jqyoui-droppable>
+						<img  id="cuttleryG" data-drag="false" data-jqyoui-options ng-model="placedCuttleryG" jqyoui-draggable ng-hide="!placedCuttleryG.src"  ng-src={{cuttleryG.src}}>
+						<div class="glyphicon glyphicon-remove hor-center-glyph-x color-red" ng-hide="placedCuttleryG.src"></div>
+					</div>
+				
+					<div class="cuttlery-horizontal" data-drop="true" data-jqyoui-options="{accept:'#cuttleryH'}" ng-model="placedCuttleryH" jqyoui-droppable>
+						<img  id="cuttleryH" data-drag="false" data-jqyoui-options ng-model="placedCuttleryH" jqyoui-draggable ng-hide="!placedCuttleryH.src"  ng-src={{cuttleryH.src}}>
+						<div class="glyphicon glyphicon-remove hor-center-glyph-x color-red" ng-hide="placedCuttleryH.src"></div>
+					</div>
 			</div >
 			<div class="position-down">			
 				<div class="position-middle">
-<!-- 					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
-<!-- 					new changes -->
-					<div class="cuttlery-vertical" data-drop="true" data-jqyoui-options="{accept:'#cuttleryA'}" ng-model="placedCuttleryA" jqyoui-droppable>
-						<div class="element"  id="cuttleryA" data-drag="false" data-jqyoui-options ng-model="placedCuttleryA" jqyoui-draggable ng-hide="!placedCuttleryA.src" ></div>
+					<div class="cuttlery-vertical"></div>
+
+					<div class="cuttlery-vertical" data-drop="true" data-jqyoui-options="{accept:'#cuttleryB'}" ng-model="placedCuttleryB" jqyoui-droppable>
+						<img  id="cuttleryB" data-drag="false" data-jqyoui-options ng-model="placedCuttleryB" jqyoui-draggable ng-hide="!placedCuttleryB.src"  ng-src={{cuttleryB.src}}>
+						<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="placedCuttleryB.src"></div>
+					</div>
+					<div class="cuttlery-vertical" data-drop="true" data-jqyoui-options="{accept:'#cuttleryC'}" ng-model="placedCuttleryC" jqyoui-droppable>
+						<img  id="cuttleryC" data-drag="false" data-jqyoui-options ng-model="placedCuttleryC" jqyoui-draggable ng-hide="!placedCuttleryC.src"  ng-src={{cuttleryC.src}}>
+						<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="placedCuttleryC.src"></div>
 					</div>
 					
-<!-- 					old style -->
-					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div class="plate"></div>
-					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-					<div class="cuttlery-vertical" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+					<div class="plate" data-drop="true" data-jqyoui-options="{accept:'#cuttleryI'}" ng-model="placedCuttleryI" jqyoui-droppable>
+						<img  id="cuttleryI" data-drag="false" data-jqyoui-options ng-model="placedCuttleryI" jqyoui-draggable ng-hide="!placedCuttleryI.src"  ng-src={{cuttleryI.src}}>
+						<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="placedCuttleryI.src"></div>
+						</div>
+					<div class="cuttlery-vertical" data-drop="true" data-jqyoui-options="{accept:'#cuttleryD'}" ng-model="placedCuttleryD" jqyoui-droppable>
+						<img  id="cuttleryD" data-drag="false" data-jqyoui-options ng-model="placedCuttleryD" jqyoui-draggable ng-hide="!placedCuttleryD.src"  ng-src={{cuttleryD.src}}>
+						<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="placedCuttleryD.src"></div>
+					</div>
+					<div class="cuttlery-vertical" data-drop="true" data-jqyoui-options="{accept:'#cuttleryA'}" ng-model="placedCuttleryA" jqyoui-droppable>
+						<img  id="cuttleryA" data-drag="false" data-jqyoui-options ng-model="placedCuttleryA" jqyoui-draggable ng-hide="!placedCuttleryA.src"  ng-src={{cuttleryA.src}}>
+						<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="placedCuttleryA.src"></div>
+					</div>
+					<div class="cuttlery-vertical" data-drop="true" data-jqyoui-options="{accept:'#cuttleryF'}" ng-model="placedCuttleryF" jqyoui-droppable>
+						<img  id="cuttleryF" data-drag="false" data-jqyoui-options ng-model="placedCuttleryF" jqyoui-draggable ng-hide="!placedCuttleryF.src"  ng-src={{cuttleryF.src}}>
+						<div class="glyphicon glyphicon-remove center-glyph-x color-red" ng-hide="placedCuttleryF.src"></div>
+					</div>
 				</div>				
 			</div>
 		
 		</div>
 		
 		
-		<div class="arrow" ng-click="nextPage('restaurantchooser');">
-		<img alt="" ng-src="images/arrow.png">
-</div>	
+		<div class="arrow"  ng-click="nextPage('etiquettequiz1')"  ng-hide="!placedCuttleryA.src || !placedCuttleryB.src ||
+		!placedCuttleryC.src || !placedCuttleryD.src ||
+		!placedCuttleryE.src || !placedCuttleryF.src ||
+		!placedCuttleryG.src || !placedCuttleryH.src ||
+		!placedCuttleryI.src " >
+			<img alt="" ng-src="images/arrow.png" >
+		</div>	
 		
 	

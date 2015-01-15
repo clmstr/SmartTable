@@ -6,7 +6,7 @@
 
 	<img alt="" src="images/5_2/plate_2.png" class="horizontal-center" >
 	<div class="answer-holder ">
-		<div ng-controller="BadAnswerAlertModalCtrl" ng-click="goodAnswer()">
+		<div ng-controller="BadAnswerAlertModalCtrl"  ng-click="form.validForm = !form.validForm">
 			<div class="color-red answer-selector-sign glyphicon glyphicon-remove" >
 			</div>
 				<img class="answer-selector"  alt="" src="images/5_2/answ1.png">
@@ -22,6 +22,6 @@
 
 	</div>
 </div>
-	<div class="arrow" ng-click="nextPage('etiquettequiz3');">
+	<div class="arrow" ng-click="nextPage('etiquettequiz3')" ng-hide="!form.validForm">
 		<img alt="" ng-src="images/arrow.png">
 </div>	

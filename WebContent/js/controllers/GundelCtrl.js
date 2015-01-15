@@ -1,18 +1,18 @@
 smarttableApp.controller('GundelCtrl',
 		['$scope',
-		 "$location",
+		 '$location',
      function ($scope
     		 ,$location){
 	$scope.myInterval = 5000;
 	  var slides = $scope.slides = [];
 	  $scope.addSlide = function() {
-	    var newWidth = 600 + slides.length + 1;
+	    var newWidth =  slides.length + 1;
 	    slides.push({
-	      image: 'http://placekitten.com/' + newWidth + '/300',
+	      image: 'images/7/pic' + newWidth + '.png',
 	      
 	    });
 	  };
-	  for (var i=0; i<4; i++) {
+	  for (var i=0; i<3; i++) {
 	    $scope.addSlide();
 	  }
 	
