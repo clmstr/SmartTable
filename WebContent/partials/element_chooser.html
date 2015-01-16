@@ -9,23 +9,26 @@
 		<div class="list">
 			<div class="list-element">
 				<img class="space" alt="" src="images/11/list1.png">
-				 <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+				 <select class="form-control" ng-model="format1" ng-options="f for f in formats"><option></option></select>
 			</div>
 			<div class="list-element">
 				<img class="space" alt="" src="images/11/list2.png">
-				 <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+				 <select class="form-control" ng-model="format2" ng-options="f for f in formats"><option></option></select>
 			</div>
 			<div class="list-element">
 				<img class="space" alt="" src="images/11/list3.png">
-				 <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+				 <select class="form-control" ng-model="format3" ng-options="f for f in formats"><option></option></select>
 			</div>
 			<div class="list-element">
 				<img class="space" alt="" src="images/11/list4.png">
-				 <select class="form-control" ng-model="format" ng-options="f for f in formats"><option></option></select>
+				 <select class="form-control" ng-model="format4" ng-options="f for f in formats"><option></option></select>
 			</div>
 		</div>
 	</div>
 	
-	<div class="arrow" ng-click="nextPage('final')" ng-hide="form.inValid">
+	<div class="arrow" ng-click="nextPage('final')" ng-hide="!((format1 == 100)&&
+					 (format2 == 200)&&
+					 (format3 == 30)&&
+					 (format4 == 400))">
 		<img alt="" ng-src="images/arrow.png">
 	</div>	
